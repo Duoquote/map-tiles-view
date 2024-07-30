@@ -14,8 +14,11 @@ const Tiles = () => {
       const tile = L.DomUtil.create("div");
       tile.style.fontSize = "16pt";
       tile.style.fontWeight = "bold";
+      tile.style.display = "flex";
+      tile.style.alignItems = "center";
+      tile.style.justifyContent = "center";
       tile.style.border = "1px solid black";
-      tile.innerHTML = `${coords.z}, ${coords.x}, ${coords.y}`;
+      tile.innerHTML = `Z:${coords.z}<br>X:${coords.x}<br>Y:${coords.y}`;
       return tile;
     };
     layer.addTo(map);
